@@ -1,0 +1,20 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int firOcc(vector<int> arr,int n,int i,int target){
+    if(i == n){
+        return -1;
+    }
+    if(arr[i] == target){
+        return i;
+    }
+    return firOcc(arr,n,i+1,target);
+}
+
+int main(){
+    vector<int> arr = {1,2,3,3,4,5};
+    int n = arr.size();
+    cout << firOcc(arr,n,0,3);
+    return 0;
+}
