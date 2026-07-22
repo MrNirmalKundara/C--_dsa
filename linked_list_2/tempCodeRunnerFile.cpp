@@ -1,0 +1,1 @@
+LL.tail->next = LL.head;
